@@ -7,6 +7,11 @@ function submitAction() {
     if(email == ""||fName==""||lName == ""){
         alert("Please fill out all the fields")
         return false
+    } else{
+        console.log("hello from the other side")
+        localStorage.setItem("fname", document.forms["contactForm"]["firName"].value)
+        localStorage.setItem("lname", document.forms["contactForm"]["lasName"].value)
+        location.href='./next.html'
     }
 
 }
